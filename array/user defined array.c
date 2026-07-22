@@ -5,55 +5,47 @@ int main()
     int sum = 0;
     float avg;
     
-    printf("enter size");
+    printf("\nenter size");
     scanf("%d", &size);
+
     int arr[size];
     int max=arr[0];
-    int min=arr[0];
-    printf("enter %d element", size);
+    printf("\nenter %d element", size);
     for (int i = 0; i < size; i++)
     {
         scanf("%d", &arr[i]);
     }
+    //find max value in array
     for (int i = 0; i < size; i++)
     {
         if(arr[i]>max){
             max=arr[i];
         }
-       
+       //find sum in array
         // printf("\n%d",arr[i]);
         sum = sum + arr[i];
-        {
-            for (int i = 1; i < size; i++)
-            {
-                if(arr[i]<min){
-                    min=arr[i];
-                }
-            }
-        }
-
+        
     }
+    //find avg of array
     avg = (float)sum / size;
     for (int i = 0; i < size; i++)
     {
         for (int j = i + 1; j < size; j++)
         {
-            if (arr[i] > arr[j]){
+            //find duplicate element in array
                 if(arr[i]==arr[j]){
-                    printf("\n duplicate element of array%d",arr[i]);
+                    printf("\nduplicate element of array%d",arr[i]);
                 }
                     
                 }
-            }
+            
             
         }
-    
-   
-    
-    printf("total of array element %d", sum);
+  
+    printf("\ntotal of array element %d", sum);
     printf("\navg of array element %.2f", avg);
     printf("\n max of array %d",max);
-    printf("\n min of array %d",min);
+    
     
     //min nu m 
     // find total sum
